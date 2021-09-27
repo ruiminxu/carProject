@@ -9,7 +9,7 @@ const User = db.define('User', {
                 primaryKey: true,
         },
         password: {
-            type: Sequelize.STRING(30),
+            type: Sequelize.STRING(300),
                 allowNull: false,
         },
         firstname: {

@@ -10,7 +10,7 @@ exports.signUp = async (req, res, next) => {
 
     try {
         const result = await User.findOne({where: {username: username}});
-
+        console.log('This is reuslt', result);
         if(!result) {
             const salt = await bcrypt.genSalt();
             const hashPassword = await bcrypt.hash(password, salt);
@@ -21,8 +21,7 @@ exports.signUp = async (req, res, next) => {
                 lastname: 'Wick',
             })
             
-            res.session.auth = true;
-            res.send(200);
+            res.status(200).send(newUser);
         }else{
             res.status(403).send('User already exists');
         }
@@ -39,7 +38,6 @@ exports.login = async (req, res, next) => {
 
         if(result) {
             await bcrypt.compare(password, result.password);
-            res.session.auth = true;
             res.status(200).send('You are logged in');
         }else{
             res.status(403).send('You are in the system');
