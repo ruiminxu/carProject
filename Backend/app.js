@@ -1,10 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const app = express();
-const db = require('./Database/index');
 
 const PORT = process.env.port || 5000;
+
+const app = express();
 
 app.use(bodyParser.json());
 

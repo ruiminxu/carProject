@@ -1,5 +1,7 @@
 import { useHistory } from "react-router-dom";
 
+import "./style.css";
+
 const Nav = () => {
     
     const history = useHistory();
@@ -11,18 +13,25 @@ const Nav = () => {
     const toHome = () => {
         history.push('/');
     }
+
+    const toSignUp = () => {
+        history.push('/signUp')
+    }
     
     return (
-        <div>
-            <div>
-                <button onClick = {toHome}>
-                    Home
-                </button>
+        <div className = 'NavBar'>
+            <div className = 'Section_One'>
+                <div className = 'Logo' onClick = {toHome}>
+                    Mainten
+                </div>
             </div>
-            <div>
-                <button onClick = {toLogin}>
+            <div className = 'Section_Two'>
+                <div className = 'Login_Button' onClick = {toLogin}>
                     Login
-                </button>
+                </div>
+                <div className = 'SignUp_Button' onClick = {toSignUp}>
+                    Sign Up
+                </div>
             </div>
         </div>
     )

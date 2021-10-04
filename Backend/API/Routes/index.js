@@ -11,4 +11,6 @@ router.post('/login', controller.login);
 
 router.post('/logout', controller.logout);
 
+router.post('/odn', controller.odn);
+
 module.exports = router;

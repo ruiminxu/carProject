@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.NavBar {
+    background-color: azure;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.Section_One {
+    
+}
+
+.Logo {
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Login_Button,
+.SignUp_Button {
+    font-size: 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.Section_Two {
+    display: flex;
+}
